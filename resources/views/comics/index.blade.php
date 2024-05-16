@@ -28,7 +28,7 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><strong>Prezzo: </strong>{{$comic->price}}</li>
           <li class="list-group-item"><strong>Serie: </strong>{{$comic->series}}</li>
-          <li class="list-group-item"><strong>Data di uscita: </strong>{{$comic->sale_date}}</li>
+          <li class="list-group-item"><strong>Data di uscita: </strong>{{date_format(date_create($comic->sale_date), "d/m/Y")}}</li>
           <li class="list-group-item text-capitalize"><strong>Categoria: </strong>{{$comic->type}}</li>
           <li class="list-group-item text-capitalize">
             <a href="{{route('comics.show', $comic)}}" class="card-link btn btn-success">Vedi dettagli</a>

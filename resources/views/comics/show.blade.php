@@ -22,7 +22,7 @@
 
   <h5><strong>Prezzo: </strong>{{$comic->price}}</h5>
   <h5><strong>Serie: </strong>{{$comic->series}}</h5>
-  <h5><strong>Data di uscita: </strong>{{$comic->sale_date}}</h5>
+  <h5><strong>Data di uscita: </strong>{{date_format(date_create($comic->sale_date), "d/m/Y")}}</h5>
   <h5 class="text-capitalize mb-5"><strong>Categoria: </strong>{{$comic->type}}</h5>
 
   <h6><strong>Artisti: </strong>{{$comic->artists}}</h6>
