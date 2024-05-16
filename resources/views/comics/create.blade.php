@@ -86,8 +86,7 @@
             <div class="col-12">
               <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea name="description" class="form-control p-0" id="description" rows="8">
-                </textarea>
+                <textarea name="description" class="form-control" id="description" rows="8"></textarea>
               </div>
             </div>
 
