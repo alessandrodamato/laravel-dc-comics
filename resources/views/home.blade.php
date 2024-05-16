@@ -4,7 +4,7 @@
 
 @section('title')
 
-Home
+- Home
 
 @endsection
 

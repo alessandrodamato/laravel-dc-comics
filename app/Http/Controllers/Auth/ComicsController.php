@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class ComicsController extends Controller
 {
@@ -12,7 +13,8 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+      $data = Comic::all();
+      return view('comics.index', compact('data'));
     }
 
     /**
@@ -34,9 +36,9 @@ class ComicsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**
