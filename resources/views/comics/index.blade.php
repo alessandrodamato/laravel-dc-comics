@@ -19,7 +19,7 @@
   <div class="row">
 
     @forelse ($data as $comic)
-    <div class="col">
+    <div class="col-3">
       <div class="card mb-5 p-3" style="width: 18rem; height: 800px">
         <img src="{{$comic->thumb}}" class="card-img-top w-100 h-100 object-fit-cover" alt="{{$comic->title}}">
         <div class="card-body">
