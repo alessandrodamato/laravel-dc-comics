@@ -31,23 +31,15 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        $comic = $request->all();
-
-        $artists_str = str_replace(',', '|', $comic['artists']);
-        $writers_str = str_replace(',', '|', $comic['writers']);
+        $form_data = $request->all();
 
         $new_comic = new Comic();
 
-        $new_comic->title = $comic['title'];
-        $new_comic->slug = Helpers::generateSlug($comic['title'], new Comic());
-        $new_comic->description = $comic['description'];
-        $new_comic->thumb = $comic['thumb'];
-        $new_comic->price = $comic['price'];
-        $new_comic->series = $comic['series'];
-        $new_comic->sale_date = $comic['sale_date'];
-        $new_comic->type = $comic['type'];
-        $new_comic->artists = $artists_str;
-        $new_comic->writers = $writers_str;
+        $form_data['slug'] = Helpers::generateSlug($new_comic->title, new Comic());
+        $form_data['artists'] =  str_replace(',', '|', $form_data['artists']);
+        $form_data['writers'] =  str_replace(',', '|', $form_data['writers']);
+
+        $new_comic->fill($form_data);
 
         $new_comic->save();
 
