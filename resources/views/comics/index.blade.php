@@ -37,7 +37,7 @@
             <a href="{{route('comics.edit', $comic)}}" class="card-link btn btn-warning">Modifica</a>
           </li>
           <li class="list-group-item text-capitalize">
-            <a href="#" class="card-link btn btn-danger">Elimina</a>
+            @include('partials.form-delete')
           </li>
         </ul>
       </div>

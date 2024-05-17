@@ -17,6 +17,7 @@
   <h1 class="mb-3">{{$comic->title}}</h1>
   <div class="mb-5">
     <a href="{{route('comics.edit', $comic)}}" class="card-link btn btn-warning">Modifica</a>
+    @include('partials.form-delete')
   </div>
 
   <img src="{{$comic->thumb}}" class="card-img-top w-25 mb-5" alt="{{$comic->title}}">

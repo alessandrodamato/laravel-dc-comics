@@ -14,7 +14,7 @@
 
 <div class="container py-5 text-center">
 
-  <h1 class="mb-5">Modifica {{$comic->title}}</h1>
+  <h1 class="mb-3">Modifica {{$comic->title}}</h1>
 
   <div class="row">
 
@@ -93,8 +93,9 @@
 
             <div class="col-12">
               <div class="mb-3 float-end">
-                <button type="reset" class="btn btn-warning">Svuota</button>
-                <button type="submit" class="btn btn-primary ms-3">Aggiorna</button>
+                @include('partials.form-delete')
+                <button type="reset" class="btn btn-warning mx-2">Svuota</button>
+                <button type="submit" class="btn btn-primary">Aggiorna</button>
               </div>
             </div>
 
