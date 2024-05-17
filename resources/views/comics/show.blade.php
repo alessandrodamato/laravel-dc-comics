@@ -25,8 +25,24 @@
   <h5><strong>Data di uscita: </strong>{{date_format(date_create($comic->sale_date), "d/m/Y")}}</h5>
   <h5 class="text-capitalize mb-5"><strong>Categoria: </strong>{{$comic->type}}</h5>
 
-  <h6><strong>Artisti: </strong>{{$comic->artists}}</h6>
-  <h6><strong>Scrittori: </strong>{{$comic->writers}}</h6>
+  @php
+    $artists_arr = explode('|', $comic->artists);
+    $writers_arr = explode('|', $comic->writers);
+  @endphp
+
+  <ul class="list-unstyled">
+    <li><strong>Artisti: </strong></li>
+    @foreach ($artists_arr as $artist)
+      <li>{{$artist}}</li>
+    @endforeach
+  </ul>
+
+  <ul class="list-unstyled">
+    <li><strong>Scrittori: </strong></li>
+    @foreach ($writers_arr as $writer)
+      <li>{{$writer}}</li>
+    @endforeach
+  </ul>
 
 </div>
 
