@@ -72,14 +72,14 @@
             <div class="col-12">
               <div class="mb-3">
                 <label for="artists" class="form-label">Artisti</label>
-                <input name="artists" type="text" class="form-control" id="artists" placeholder="Inserisci uno o più artisti">
+                <input name="artists" type="text" class="form-control" id="artists" placeholder="Inserisci uno o più artisti, separati da una virgola">
               </div>
             </div>
 
             <div class="col-12">
               <div class="mb-3">
                 <label for="writers" class="form-label">Scrittori</label>
-                <input name="writers" type="text" class="form-control" id="writers" placeholder="Inserisci uno o più scrittori">
+                <input name="writers" type="text" class="form-control" id="writers" placeholder="Inserisci uno o più scrittori, separati da una virgola">
               </div>
             </div>
 
