@@ -14,7 +14,10 @@
 
 <div class="container py-5 text-center">
 
-  <h1 class="mb-5">{{$comic->title}}</h1>
+  <h1 class="mb-3">{{$comic->title}}</h1>
+  <div class="mb-5">
+    <a href="{{route('comics.edit', $comic)}}" class="card-link btn btn-warning">Modifica</a>
+  </div>
 
   <img src="{{$comic->thumb}}" class="card-img-top w-25 mb-5" alt="{{$comic->title}}">
 

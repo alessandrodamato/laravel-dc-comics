@@ -34,7 +34,7 @@
             <a href="{{route('comics.show', $comic)}}" class="card-link btn btn-success">Vedi dettagli</a>
           </li>
           <li class="list-group-item text-capitalize">
-            <a href="#" class="card-link btn btn-warning">Modifica</a>
+            <a href="{{route('comics.edit', $comic)}}" class="card-link btn btn-warning">Modifica</a>
           </li>
           <li class="list-group-item text-capitalize">
             <a href="#" class="card-link btn btn-danger">Elimina</a>
