@@ -36,8 +36,6 @@ class ComicsController extends Controller
         $new_comic = new Comic();
 
         $form_data['slug'] = Helpers::generateSlug($new_comic->title, new Comic());
-        $form_data['artists'] =  str_replace(',', '|', $form_data['artists']);
-        $form_data['writers'] =  str_replace(',', '|', $form_data['writers']);
 
         $new_comic->fill($form_data);
 

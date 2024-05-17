@@ -29,8 +29,8 @@
   <h5 class="text-capitalize mb-5"><strong>Categoria: </strong>{{$comic->type}}</h5>
 
   @php
-    $artists_arr = explode('|', $comic->artists);
-    $writers_arr = explode('|', $comic->writers);
+    $artists_arr = explode(',', $comic->artists);
+    $writers_arr = explode(',', $comic->writers);
   @endphp
 
   <ul class="list-unstyled">

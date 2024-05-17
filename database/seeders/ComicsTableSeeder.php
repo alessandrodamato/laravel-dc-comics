@@ -30,8 +30,8 @@ class ComicsTableSeeder extends Seeder
         $new_comic->sale_date = $comic['sale_date'];
         $new_comic->type = $comic['type'];
         // trasformo gli array in stringa, perché teoricamente dovrebbero essere in un altra tabella in relazione
-        $new_comic->artists = implode('|', $comic['artists']);
-        $new_comic->writers = implode('|', $comic['writers']);
+        $new_comic->artists = implode(',', $comic['artists']);
+        $new_comic->writers = implode(',', $comic['writers']);
 
         $new_comic->save();
 
