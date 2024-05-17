@@ -33,6 +33,9 @@ class ComicsController extends Controller
     {
         $comic = $request->all();
 
+        $artists_str = str_replace(',', '|', $comic['artists']);
+        $writers_str = str_replace(',', '|', $comic['writers']);
+
         $new_comic = new Comic();
 
         $new_comic->title = $comic['title'];
@@ -43,8 +46,8 @@ class ComicsController extends Controller
         $new_comic->series = $comic['series'];
         $new_comic->sale_date = $comic['sale_date'];
         $new_comic->type = $comic['type'];
-        $new_comic->artists = $comic['artists'];
-        $new_comic->writers = $comic['writers'];
+        $new_comic->artists = $artists_str;
+        $new_comic->writers = $writers_str;
 
         $new_comic->save();
 
