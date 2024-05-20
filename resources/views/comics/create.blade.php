@@ -16,6 +16,16 @@
 
   <h1 class="mb-5">Aggiungi un fumetto</h1>
 
+  @if($errors->any())
+    <div class="alert alert-danger text-start " role="alert">
+      <ul class="m-0">
+        @foreach ($errors->all() as $error)
+          <li>{{$error}}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
+
   <div class="row">
 
     <div class="col-6 offset-3">
