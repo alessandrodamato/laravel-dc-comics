@@ -59,7 +59,7 @@
             <div class="col-6">
               <div class="mb-3">
                 <label for="sale_date" class="form-label">Data di uscita</label>
-                <input name="sale_date" type="text" class="form-control" id="sale_date" placeholder="Data di uscita" value="{{$comic->sale_date}}">
+                <input name="sale_date" type="date" class="form-control" id="sale_date" placeholder="Data di uscita" value="{{$comic->sale_date}}">
               </div>
             </div>
 
