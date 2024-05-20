@@ -34,7 +34,7 @@ class ComicsRequest extends FormRequest
     }
 
     public function messages(){
-      return[
+      return [
         'title.required' => 'Il titolo è obbligatorio',
         'title.min' => 'Il titolo deve essere almeno di :min caratteri',
         'title.max' => 'Il titolo deve essere massimo di :max caratteri',
@@ -45,9 +45,9 @@ class ComicsRequest extends FormRequest
         'series.min' => 'Il campo serie deve essere almeno di :min caratteri',
         'series.max' => 'Il campo serie deve essere massimo di :max caratteri',
         'sale_date.required' => 'La data di uscita è obbligatoria',
-        'type.required' => 'Il tipo è obbligatorio',
-        'type.min' => 'Il tipo deve essere almeno di :min caratteri',
-        'type.max' => 'Il tipo deve essere massimo di :max caratteri',
+        'type.required' => 'La categoria è obbligatoria',
+        'type.min' => 'La categoria deve essere almeno di :min caratteri',
+        'type.max' => 'La categoria deve essere massimo di :max caratteri',
         'artists.required' => 'Il campo artisti è obbligatorio',
         'writers.required' => 'Il campo scrittori è obbligatorio',
       ];

@@ -40,56 +40,136 @@
             <div class="col-5">
               <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
-                <input name="title" type="text" class="form-control" id="title" placeholder="Titolo del fumetto">
+                <input
+                  name="title"
+                  type="text"
+                  class="form-control @error('title') is-invalid @enderror"
+                  id="title"
+                  placeholder="Titolo del fumetto"
+                  value="{{old('title')}}"
+                >
+                @error('title')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
             <div class="col-7">
               <div class="mb-3">
                 <label for="thumb" class="form-label">Copertina</label>
-                <input name="thumb" type="text" class="form-control" id="thumb" placeholder="Inserisci un URL dell'immagine di copertina">
+                <input
+                  name="thumb"
+                  type="text"
+                  class="form-control @error('thumb') is-invalid @enderror"
+                  id="thumb"
+                  placeholder="Inserisci un URL dell'immagine di copertina"
+                  value="{{old('thumb')}}"
+                >
+                @error('thumb')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
-            <div class="col-2">
+            <div class="col-3">
               <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input name="price" type="text" class="form-control" id="price" placeholder="Prezzo">
+                <input
+                  name="price"
+                  type="text"
+                  class="form-control @error('price') is-invalid @enderror"
+                  id="price"
+                  placeholder="Prezzo"
+                  value="{{old('price')}}"
+                >
+                @error('price')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
             <div class="col-4">
               <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input name="series" type="text" class="form-control" id="series" placeholder="Serie">
+                <input
+                  name="series"
+                  type="text"
+                  class="form-control @error('series') is-invalid @enderror"
+                  id="series"
+                  placeholder="Serie"
+                  value="{{old('series')}}"
+                >
+                @error('series')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-5">
               <div class="mb-3">
                 <label for="sale_date" class="form-label">Data di uscita</label>
-                <input name="sale_date" type="date" class="form-control" id="sale_date" placeholder="Data di uscita">
+                <input
+                  name="sale_date"
+                  type="date"
+                  class="form-control @error('sale_date') is-invalid @enderror"
+                  id="sale_date"
+                  placeholder="Data di uscita"
+                  value="{{old('sale_date')}}"
+                >
+                @error('sale_date')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
             <div class="col-12">
               <div class="mb-3">
                 <label for="type" class="form-label">Categoria</label>
-                <input name="type" type="text" class="form-control" id="type" placeholder="Categoria">
+                <input
+                  name="type"
+                  type="text"
+                  class="form-control @error('type') is-invalid @enderror"
+                  id="type"
+                  placeholder="Categoria"
+                  value="{{old('type')}}"
+                >
+                @error('type')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
             <div class="col-12">
               <div class="mb-3">
                 <label for="artists" class="form-label">Artisti</label>
-                <input name="artists" type="text" class="form-control" id="artists" placeholder="Inserisci uno o più artisti, separati da una virgola">
+                <input
+                  name="artists"
+                  type="text"
+                  class="form-control @error('artists') is-invalid @enderror"
+                  id="artists"
+                  placeholder="Inserisci uno o più artisti, separati da una virgola"
+                  value="{{old('artists')}}"
+                >
+                @error('artists')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 
             <div class="col-12">
               <div class="mb-3">
                 <label for="writers" class="form-label">Scrittori</label>
-                <input name="writers" type="text" class="form-control" id="writers" placeholder="Inserisci uno o più scrittori, separati da una virgola">
+                <input
+                  name="writers"
+                  type="text"
+                  class="form-control @error('writers') is-invalid @enderror"
+                  id="writers"
+                  placeholder="Inserisci uno o più scrittori, separati da una virgola"
+                  value="{{old('writers')}}"
+                >
+                @error('writers')
+                  <div class="text-danger my-1" style="font-size: .8rem">{{$message}}</div>
+                @enderror
               </div>
             </div>
 

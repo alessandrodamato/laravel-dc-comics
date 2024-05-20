@@ -42,7 +42,7 @@
               </div>
             </div>
 
-            <div class="col-2">
+            <div class="col-3">
               <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
                 <input name="price" type="text" class="form-control" id="price" placeholder="Prezzo" value="{{$comic->price}}">
@@ -56,7 +56,7 @@
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-5">
               <div class="mb-3">
                 <label for="sale_date" class="form-label">Data di uscita</label>
                 <input name="sale_date" type="date" class="form-control" id="sale_date" placeholder="Data di uscita" value="{{$comic->sale_date}}">
